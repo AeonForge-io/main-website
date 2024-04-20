@@ -107,7 +107,7 @@ export function headermenu() {
   ));
 
   return (
-    <Box pb={0}>
+    <Box>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <img src='AF64.png' height={30}/>
