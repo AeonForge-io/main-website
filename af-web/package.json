@@ -22,6 +22,7 @@
     "wagmi": "^2.5.11"
   },
   "devDependencies": {
+    "@types/lodash.merge": "^4.6.9",
     "@types/node": "^18.19.3",
     "@types/react": "^18.2.64",
     "eslint": "^8.15.0",
