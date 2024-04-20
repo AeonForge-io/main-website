@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.iekbcc0 {
+  font-size: var(--mantine-font-size-sm) !important;
+}

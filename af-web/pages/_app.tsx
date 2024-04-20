@@ -5,11 +5,19 @@ import '@mantine/core/styles.css';
 import { createTheme, MantineProvider } from '@mantine/core';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { WagmiProvider } from 'wagmi';
-import { getDefaultConfig, RainbowKitProvider, Chain, darkTheme, midnightTheme } from '@rainbow-me/rainbowkit';
+import { getDefaultConfig, RainbowKitProvider, Chain, darkTheme, Theme } from '@rainbow-me/rainbowkit';
+import merge from 'lodash.merge';
 
 const AeonForge = createTheme({
-  /** Put your mantine theme override here */
+/* for future mantine overrides if needed */
 });
+
+/* override rainbow kit theme */
+const rainbowkitAFTheme = merge(darkTheme(), {
+  colors: {
+    accentColor: '#4970B5',
+  },
+} as Theme);
 
 /* add MainnetZ network */
 const MainnetZ = {
@@ -45,7 +53,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={client}>
-        <RainbowKitProvider theme={darkTheme()} initialChain={MainnetZ}>
+        <RainbowKitProvider theme={rainbowkitAFTheme} initialChain={MainnetZ}>
           <MantineProvider theme={AeonForge} defaultColorScheme="dark">
             <Component {...pageProps} />
           </MantineProvider>
