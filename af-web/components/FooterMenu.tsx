@@ -1,5 +1,5 @@
 import { Anchor, Group, ActionIcon, rem } from '@mantine/core';
-import { IconBrandTwitter, IconBrandDiscord } from '@tabler/icons-react';
+import { IconBrandTwitter, IconBrandDiscord, IconBrandGithub } from '@tabler/icons-react';
 import classes from '/styles/FooterMenu.module.css';
 
 const links = [
@@ -39,6 +39,11 @@ export function footermenu() {
           <a href="https://twitter.com/AeonForgeio" target="_blank">
             <ActionIcon size="lg" variant="default" radius="xl">
               <IconBrandTwitter style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+            </ActionIcon>
+          </a>
+          <a href="https://github.com/AeonForge-io" target="_blank">
+            <ActionIcon size="lg" variant="default" radius="xl">
+              <IconBrandGithub style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
             </ActionIcon>
           </a>
         </Group>
