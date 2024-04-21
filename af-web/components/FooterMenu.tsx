@@ -3,10 +3,10 @@ import { IconBrandTwitter, IconBrandDiscord, IconBrandGithub } from '@tabler/ico
 import classes from '/styles/FooterMenu.module.css';
 
 const links = [
-  { link: '#', label: 'Terms of Use' },
-  { link: '#', label: 'Privacy Policy' },
-  { link: '#', label: 'White Papers' },
-  { link: '#', label: 'Contact' },
+  { link: '/terms', label: 'Terms of Use' },
+  { link: '/privacy', label: 'Privacy Policy' },
+  { link: '/docs', label: 'White Papers' },
+  { link: '/contact', label: 'Contact' },
 ];
 
 export function footermenu() {

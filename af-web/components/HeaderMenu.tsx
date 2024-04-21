@@ -35,14 +35,14 @@ const aboutdata = [
     icon: IconCode,
     title: 'Aeon Forge',
     description: 'Find out more about us and what we do.',
-    url: '#',
+    url: '/aboutus',
     target: '_self',
   },
   {
     icon: IconCoin,
     title: 'Our Team',
     description: 'Meet our team of talented individuals.',
-    url: '#',
+    url: 'ourteam',
     target: '_self',
   },
   {
@@ -66,14 +66,14 @@ const projectdata = [
     icon: IconCode,
     title: 'DragonZ - Series 1',
     description: 'Thar be some cute DragonZ on MainnetZ!',
-    url: '#',
+    url: '/dragonz',
     target: '_self',
   },
   {
     icon: IconCoin,
     title: 'DragonZ Viewer',
     description: 'Take a look at the entire DragonZ collection.',
-    url: '#',
+    url: '/dragonzviewer',
     target: '_self',
   },
 ];
@@ -128,7 +128,7 @@ export function headermenu() {
     <Box>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <img src='AF64.png' height={30}/>
+          <a href="/"><img src='AF64.png' width="auto" height={50}/></a>
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <a href="/" className={classes.link}>
@@ -136,7 +136,7 @@ export function headermenu() {
             </a>
             <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
-                <a href="#" className={classes.link}>
+                <div className={classes.link}>
                   <Center inline>
                     <Box component="span" mr={5}>
                       Projects
@@ -146,7 +146,7 @@ export function headermenu() {
                       color={theme.colors.blue[6]}
                     />
                   </Center>
-                </a>
+                </div>
               </HoverCard.Target>
 
               <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
@@ -170,7 +170,7 @@ export function headermenu() {
                         Looking for more in-depth information on one of our projects?
                       </Text>
                     </div>
-                    <a href="#">
+                    <a href="/docs">
                       <Button variant="default">White Papers</Button>
                     </a>
                   </Group>
@@ -179,7 +179,7 @@ export function headermenu() {
             </HoverCard>
             <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
-                <a href="#" className={classes.link}>
+                <div className={classes.link}>
                   <Center inline>
                     <Box component="span" mr={5}>
                       About Us
@@ -189,7 +189,7 @@ export function headermenu() {
                       color={theme.colors.blue[6]}
                     />
                   </Center>
-                </a>
+                </div>
               </HoverCard.Target>
 
               <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
@@ -205,7 +205,7 @@ export function headermenu() {
 
               </HoverCard.Dropdown>
             </HoverCard>
-            <a href="#" className={classes.link}>
+            <a href="/roadmap" className={classes.link}>
               Roadmap
             </a>
           </Group>
@@ -230,7 +230,7 @@ export function headermenu() {
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
-          <a href="#" className={classes.link}>
+          <a href="/" className={classes.link}>
             Home
           </a>
           <UnstyledButton className={classes.link} onClick={toggleProjectLinks}>
@@ -257,7 +257,7 @@ export function headermenu() {
             </Center>
           </UnstyledButton>
           <Collapse in={aboutLinksOpened}>{aboutLinks}</Collapse>
-          <a href="#" className={classes.link}>
+          <a href="/roadmap" className={classes.link}>
             Roadmap
           </a>
           
