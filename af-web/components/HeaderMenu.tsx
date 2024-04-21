@@ -6,7 +6,6 @@ import {
   Text,
   SimpleGrid,
   ThemeIcon,
-  Anchor,
   Divider,
   Center,
   Box,
@@ -24,11 +23,9 @@ import {
   IconFingerprint,
   IconCoin,
   IconChevronDown,
-  IconTarget,
 } from '@tabler/icons-react';
 import classes from '/styles/HeaderMenu.module.css';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { url } from 'inspector';
 
 const aboutdata = [
   {
