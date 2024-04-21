@@ -27,6 +27,7 @@ import {
 } from '@tabler/icons-react';
 import classes from '/styles/HeaderMenu.module.css';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { url } from 'inspector';
 
 const aboutdata = [
   {
@@ -43,6 +44,7 @@ const aboutdata = [
     icon: IconBook,
     title: 'Charity',
     description: 'Learn more about the Charities we support.',
+    url: 'charity',
   },
   {
     icon: IconFingerprint,
