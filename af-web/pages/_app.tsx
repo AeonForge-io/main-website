@@ -2,11 +2,12 @@ import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import type { AppProps } from 'next/app';
 import '@mantine/core/styles.css';
-import { createTheme, MantineProvider } from '@mantine/core';
+import { createTheme, MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { WagmiProvider } from 'wagmi';
 import { getDefaultConfig, RainbowKitProvider, Chain, darkTheme, Theme } from '@rainbow-me/rainbowkit';
 import merge from 'lodash.merge';
+import Head from 'next/head';
 
 const AeonForge = createTheme({
 /* for future mantine overrides if needed */
@@ -49,18 +50,24 @@ const config = getDefaultConfig({
 
 const client = new QueryClient();
 
-function MyApp({ Component, pageProps }: AppProps) {
+function AeonForgeWeb({ Component, pageProps }: AppProps) {
   return (
-    <WagmiProvider config={config}>
-      <QueryClientProvider client={client}>
-        <RainbowKitProvider theme={rainbowkitAFTheme} initialChain={MainnetZ}>
-          <MantineProvider theme={AeonForge} defaultColorScheme="dark">
+    <MantineProvider theme={AeonForge} forceColorScheme="dark">
+      <Head>
+        <title>{pageProps.title || 'Aeon Forge'}</title>
+        <meta name="description" content="Aeon Forge" />
+        <link rel="shortcut icon" href="/AeonForgeLogo.ico" />
+        <ColorSchemeScript forceColorScheme="dark" />
+      </Head>
+      <WagmiProvider config={config}>
+        <QueryClientProvider client={client}>
+          <RainbowKitProvider theme={rainbowkitAFTheme} initialChain={MainnetZ}>
             <Component {...pageProps} />
-          </MantineProvider>
-        </RainbowKitProvider>
-      </QueryClientProvider>
-    </WagmiProvider>
+          </RainbowKitProvider>
+        </QueryClientProvider>
+      </WagmiProvider>
+    </MantineProvider>  
   );
 }
 
-export default MyApp;
+export default AeonForgeWeb;
