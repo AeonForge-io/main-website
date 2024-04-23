@@ -1,14 +1,11 @@
-import type { NextPage } from 'next';
+'use client';
+
 import HeaderMenu from '../components/HeaderMenu';
 import FooterMenu from '../components/FooterMenu';
 import { AppShell, Grid } from '@mantine/core';
 import classes from '/styles/Home.module.css';
-import { useEffect } from 'react';
 
-const Home: NextPage = () => {
-  useEffect(() => {
-      document.title = 'Aeon Forge';
-    }, []);
+export function Home() {
   return (
     <AppShell padding="0px" withBorder={false}>
       <AppShell.Header><HeaderMenu /></AppShell.Header>
@@ -28,5 +25,3 @@ const Home: NextPage = () => {
     </AppShell>
   );
 };
-
-export default Home;
