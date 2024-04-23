@@ -63,7 +63,7 @@ const projectdata = [
     icon: IconCode,
     title: 'DragonZ - Series 1',
     description: 'Thar be some cute DragonZ on MainnetZ!',
-    url: '/dragonz',
+    url: '/projects/dragonz',
     target: '_self',
   },
   {
@@ -125,7 +125,7 @@ export function headermenu() {
     <Box>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <a href="/"><img src='AF64.png' width="auto" height={50}/></a>
+          <a href="/"><img src='/AF64.png' width="auto" height={50}/></a>
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <a href="/" className={classes.link}>
