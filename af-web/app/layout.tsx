@@ -1,13 +1,8 @@
 import '@mantine/core/styles.css';
 import '@rainbow-me/rainbowkit/styles.css';
-import { Metadata } from 'next'
 import { Providers } from './providers';
 import { ColorSchemeScript } from '@mantine/core';
 
-export const metadata: Metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
-}
 export default function RootLayout({ children }: { children: any }) {
   return (
     <html lang="en">
