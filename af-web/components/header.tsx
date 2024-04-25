@@ -1,3 +1,5 @@
+'use client';
+
 import {
   HoverCard,
   Group,
@@ -32,21 +34,21 @@ const aboutdata = [
     icon: IconCode,
     title: 'Aeon Forge',
     description: 'Find out more about us and what we do.',
-    url: '/aboutus',
+    url: '/about/us',
     target: '_self',
   },
   {
     icon: IconCoin,
     title: 'Our Team',
     description: 'Meet our team of talented individuals.',
-    url: 'ourteam',
+    url: '/about/team',
     target: '_self',
   },
   {
     icon: IconBook,
     title: 'Charity',
     description: 'Learn more about the Charities we support.',
-    url: 'charity',
+    url: '/about/charity',
     target: '_self',
   },
   {
@@ -70,12 +72,12 @@ const projectdata = [
     icon: IconCoin,
     title: 'DragonZ Viewer',
     description: 'Take a look at the entire DragonZ collection.',
-    url: '/dragonzviewer',
+    url: '/projects/dragonzviewer',
     target: '_self',
   },
 ];
 
-export function headermenu() {
+export default function Header() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const [projectLinksOpened, { toggle: toggleProjectLinks }] = useDisclosure(false);
   const [aboutLinksOpened, { toggle: toggleAboutLinks }] = useDisclosure(false);
@@ -268,5 +270,3 @@ export function headermenu() {
     </Box>
   );
 }
-
-export default headermenu;

@@ -2,6 +2,7 @@
 
 import '@mantine/core/styles.css';
 import '@rainbow-me/rainbowkit/styles.css';
+import '/styles/globals.css';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { Metadata } from 'next'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';

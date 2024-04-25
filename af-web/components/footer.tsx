@@ -1,3 +1,5 @@
+'use client';
+
 import { Anchor, Group, ActionIcon, rem } from '@mantine/core';
 import { IconBrandTwitter, IconBrandDiscord, IconBrandGithub } from '@tabler/icons-react';
 import classes from '/styles/FooterMenu.module.css';
@@ -9,14 +11,13 @@ const links = [
   { link: '/contact', label: 'Contact' },
 ];
 
-export function footermenu() {
+export default function Footer() {
   const items = links.map((link) => (
     <Anchor
       c="dimmed"
       key={link.label}
       href={link.link}
       lh={1}
-      onClick={(event) => event.preventDefault()}
       size="sm"
     >
       {link.label}
@@ -51,5 +52,3 @@ export function footermenu() {
     </div>
   );
 }
-
-export default footermenu;

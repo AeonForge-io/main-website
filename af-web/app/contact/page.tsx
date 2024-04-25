@@ -1,9 +1,9 @@
 import classes from '/styles/Home.module.css';
 
-export default function DragonZ() {
+export default function Contact() {
   return (
         <main className={classes.main}>
-          DragonZ Stuff Here
+          Contact
         </main>
   );
 };

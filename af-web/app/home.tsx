@@ -1,15 +1,10 @@
 'use client';
 
-import HeaderMenu from '../components/HeaderMenu';
-import FooterMenu from '../components/FooterMenu';
-import { AppShell, Grid } from '@mantine/core';
+import { Grid } from '@mantine/core';
 import classes from '/styles/Home.module.css';
 
-export function Home() {
+export default function Home() {
   return (
-    <AppShell padding="0px" withBorder={false}>
-      <AppShell.Header><HeaderMenu /></AppShell.Header>
-      <AppShell.Main>
         <main className={classes.main}>
           <Grid className={classes.grid}>
             <Grid.Col span={7} style={{ paddingRight: '50px' }}>
@@ -20,8 +15,5 @@ export function Home() {
             <Grid.Col span={5} style={{ maxHeight: '60vh', maxWidth: '500px'}}><img src="AF.png" style={{ maxWidth: '100%', maxHeight: '100%' }}></img></Grid.Col>
           </Grid>
         </main>
-      </AppShell.Main>
-      <AppShell.Footer><FooterMenu /></AppShell.Footer>
-    </AppShell>
   );
 };

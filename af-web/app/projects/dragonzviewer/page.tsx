@@ -1,9 +1,9 @@
 import classes from '/styles/Home.module.css';
 
-export default function DragonZ() {
+export default function DragonZViewer() {
   return (
         <main className={classes.main}>
-          DragonZ Stuff Here
+          DragonZ Viewer will be here
         </main>
   );
 };
