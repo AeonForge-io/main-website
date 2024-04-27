@@ -4,7 +4,6 @@ import '@mantine/core/styles.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import '/styles/globals.css';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-import { Metadata } from 'next'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { WagmiProvider } from 'wagmi';
 import { getDefaultConfig, RainbowKitProvider, Chain, darkTheme, Theme } from '@rainbow-me/rainbowkit';
@@ -52,6 +51,7 @@ export function Providers({ children }: { children: any }) {
     <html lang="en">
       <head>
         <ColorSchemeScript defaultColorScheme='dark' />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
         <MantineProvider defaultColorScheme='dark'>
