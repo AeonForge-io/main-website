@@ -37,8 +37,8 @@ const MainnetZ = {
 } as const satisfies Chain;
 
 const config = getDefaultConfig({
-  appName: 'Aeon Forge',
-  projectId: 'aeonforge',
+  appName: 'AeonForge',
+  projectId: '6171d3a54e3f3fea9abd2dc659b9ccde',
   chains: [
     MainnetZ,
   ],
@@ -51,7 +51,7 @@ export function Providers({ children }: { children: any }) {
   return (
     <html lang="en">
       <head>
-        <ColorSchemeScript />
+        <ColorSchemeScript defaultColorScheme='dark' />
       </head>
       <body>
         <MantineProvider defaultColorScheme='dark'>
