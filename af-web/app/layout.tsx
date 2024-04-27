@@ -1,7 +1,6 @@
 import '@mantine/core/styles.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import { Providers } from './providers';
-import { ColorSchemeScript } from '@mantine/core';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
