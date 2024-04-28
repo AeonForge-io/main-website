@@ -1,0 +1,12 @@
+.card {
+  background-color: var(--mantine-color-body);
+  min-width: 200px;
+}
+
+.avatar {
+  border: rem(2px) solid var(--mantine-color-body);
+}
+
+.button {
+  margin-top: auto;
+}
