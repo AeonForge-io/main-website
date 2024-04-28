@@ -127,7 +127,7 @@ export default function Header() {
     <Box>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <a href="/"><img src='AF64.png' width="auto" height={50}/></a>
+          <a href="/"><img src='../AF64.png' width="auto" height={50}/></a>
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <a href="/" className={classes.link}>
